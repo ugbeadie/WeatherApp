@@ -18,11 +18,11 @@ function today(d) {
     return `${today}`;
 }
 
-searchBox.addEventListener('keypress', setQuery);
-
 searchBtn.addEventListener('click', () => {
     getWeather(searchBox.value)
 })
+
+searchBox.addEventListener('keypress', setQuery);
 
 function setQuery(evt) {
     if (evt.keyCode == 13) {
