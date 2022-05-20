@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-    max-width: 100vw;
+    max-width: 100%;
     height: 100vh;
     @include flexCenter(column);
     color: $primary-color;
