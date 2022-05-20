@@ -1,0 +1,146 @@
+@import './config';
+@import './variables';
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;500;800&display=swap');
+@function weight($weight-name) {
+    @return map-get($font-weights , $weight-name )
+};
+
+body {
+    font-family: 'Mukta',
+    sans-serif;
+    background: linear-gradient(hsla(0, 0%, 0%, 0.5) 100%,
+        rgba(255, 255, 255, 0)),
+    url(../images/nathan-dumlao-OHzkfrv9Ycw-unsplash.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    // width: 100vw;
+    height: 100vh;
+    @include flexCenter(column);
+    color: $primary-color;
+    .search {
+        
+        .search_box {
+            width: 350px;
+            border: none;
+            outline: none;
+            padding: 10px 15px;
+            background-color: rgba(255, 255, 255, 0.6);
+            border-radius: 15px 0;
+        
+            &:focus {
+                border-bottom: 5px solid $secondary-color;
+            }
+
+            &::placeholder {
+                color: $placeholder-color
+            }
+        
+        }
+
+        .search_btn {
+            display: none;
+            @extend .search_box;
+            @include transition-ease-in;
+            width: 100px;
+            margin-left: 20px;            
+            cursor: pointer;
+            color: $placeholder-color;
+
+            // &:hover {
+            //     background-color: $secondary-color;
+            // }
+
+            &:focus {
+                border-bottom: none;
+            }
+        }
+    }
+
+    .flex {
+        margin-top: 30px;
+        // width: 40vw;
+        // @include flexBetween;
+
+        .day_city {
+            @include flexCenter(column);
+            letter-spacing: 1px;
+            .day {
+                font-weight: weight(medium);
+                font-size: 50px;
+            }
+        
+            .city {
+                @include flexCenter(row);
+                font-weight: weight(light);
+                font-size: 18px;
+            }
+        }
+        
+        .temp {
+            width: 100vw;
+            @include flexCenter(column);
+            position: relative;
+            margin-top: 30px;
+        
+            h1 {
+                font-weight: weight(bold);
+                font-size: 100px;
+                // margin-top: 30px;
+                text-shadow: 4px 10px rgba(0, 0, 0, 0.6);
+        
+                & span {
+                    font-weight: weight(medium);
+                    font-size: 80px;
+                }
+            }
+        
+            p {
+                font-weight: weight(medium);
+                font-size: 30px;
+                font-style: italic;
+                text-shadow: 0 5px rgba(0, 0, 0, 0.6);
+                position: absolute;
+                bottom: -18px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        .search {
+            @include flexCenter(row);
+    
+            .search_box {
+                width: 300px;
+            }
+    
+            .search_btn {
+                display: block;
+                width: 120px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        padding: 20px;
+        .search {
+            @include flexCenter(row);
+
+            .search_box {
+                width: 100%;
+            }
+
+            .search_btn {
+                display: block;
+                width: 80px;
+            }
+        }
+    }
+}
