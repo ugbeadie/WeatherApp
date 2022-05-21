@@ -231,11 +231,4 @@ body {
     width: 80px;
   }
 }
-
-@media screen and (max-width: 320px) {
-  .title {
-    position: absolute;
-    top: 0;
-  }
-}
 /*# sourceMappingURL=main.css.map */
