@@ -147,9 +147,9 @@ body {
             position: absolute;
             top: 20px;
 
-            &.active {
-                display: none
-            }
+            // &.active {
+            //     display: none
+            // }
         }
         .search {
             @include flexCenter(row);
