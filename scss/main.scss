@@ -146,6 +146,10 @@ body {
         .title {
             position: absolute;
             top: 20px;
+
+            &.active {
+                display: none
+            }
         }
         .search {
             @include flexCenter(row);

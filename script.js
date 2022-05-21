@@ -25,6 +25,7 @@ function today(d) {
 
 searchBtn.addEventListener('click', () => {
     getWeather(searchBox.value);
+    title.classList.add('active')
 })
 
 searchBox.addEventListener('keypress', setQuery);
@@ -34,6 +35,8 @@ searchBox.addEventListener('keypress', setQuery);
 function setQuery(evt) {
     if (evt.keyCode == 13) {
         getWeather(searchBox.value);
+        title.classList.add('active')
+
     }
 }
 

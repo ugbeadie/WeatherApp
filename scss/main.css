@@ -208,6 +208,9 @@ body {
     position: absolute;
     top: 20px;
   }
+  .container .title.active {
+    display: none;
+  }
   .container .search {
     display: -webkit-box;
     display: -ms-flexbox;
