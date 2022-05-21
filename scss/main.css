@@ -206,7 +206,7 @@ body {
   }
   .container .title {
     position: absolute;
-    top: 10px;
+    top: 20px;
   }
   .container .search {
     display: -webkit-box;
@@ -229,6 +229,13 @@ body {
   .container .search .search_btn {
     display: block;
     width: 80px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .title {
+    position: absolute;
+    top: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */
