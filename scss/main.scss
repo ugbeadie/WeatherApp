@@ -21,6 +21,20 @@ body {
     height: 100vh;
     @include flexCenter(column);
     color: $primary-color;
+
+    .title {
+        position: absolute;
+        top: 20px;
+        font-weight: weight(bold);
+        font-size: 40px;
+        letter-spacing: 1;
+        text-shadow: 4px 6px rgba(0, 0, 0, 0.6);
+
+        span {
+            color: $secondary-color;
+        }
+    }
+
     .search {
         
         .search_box {
@@ -42,7 +56,6 @@ body {
         }
 
         .search_btn {
-            display: none;
             @extend .search_box;
             @include transition-ease-in;
             width: 100px;
@@ -50,10 +63,8 @@ body {
             cursor: pointer;
             color: $placeholder-color;
             background-color: $secondary-color;
+            font-weight: weight(medium);
 
-            // &:hover {
-            //     background-color: $secondary-color;
-            // }
 
             &:focus {
                 border-bottom: none;
@@ -90,8 +101,8 @@ body {
             h1 {
                 font-weight: weight(bold);
                 font-size: 100px;
-                // margin-top: 30px;
                 text-shadow: 4px 10px rgba(0, 0, 0, 0.6);
+                cursor: pointer;
         
                 & span {
                     font-weight: weight(medium);
@@ -131,6 +142,11 @@ body {
 @media screen and (max-width: 500px) {
     .container {
         padding: 20px;
+
+        .title {
+            position: absolute;
+            top: 100px;
+        }
         .search {
             @include flexCenter(row);
 

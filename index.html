@@ -6,26 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="./scss/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <title>Weather App</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container" data-aos="zoom-in">
+        <h1 class="title">WEATHER<span>MAST</span></h1>
         <div class="search">
             <input type="text" class="search_box" placeholder="Enter City Name">
             <button class="search_btn">Search</button>
         </div>
+        <!-- <p class="instruction">Press Enter or click the search button</p> -->
         <div class="flex">
             <div class="day_city">
-            <p class="day "></p>
-            <p class="city"></p>
+                <p class="day "></p>
+                <p class="city"></p>
             </div>
             <div class="temp">
-            <h1 class="temp_value"><span></span></h1>
-            <p class="temp_desc"></p>
+                <h1 class="temp_value"><span></span></h1>
+                <p class="temp_desc"></p>
             </div>
         </div>
     </div>
         
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800
+        });
+    </script>
 </body>
 </html>
