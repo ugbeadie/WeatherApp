@@ -206,7 +206,7 @@ body {
   }
   .container .title {
     position: absolute;
-    top: 0px;
+    top: 10px;
   }
   .container .search {
     display: -webkit-box;
